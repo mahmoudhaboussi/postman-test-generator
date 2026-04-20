@@ -1,0 +1,218 @@
+.card {
+  border-radius: var(--radius-lg);
+  border: 0.5px solid var(--color-border);
+  background: var(--color-bg);
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-left: 3px solid #378add;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.card.previewed { border-left-color: #1d9e75; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--color-bg-secondary);
+  border-bottom: 0.5px solid var(--color-border);
+  cursor: pointer;
+  user-select: none;
+}
+
+.num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--color-blue-bg);
+  color: var(--color-blue-text);
+  font-size: 11px; font-weight: 500;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.num.numDone { background: var(--color-green-bg); color: var(--color-green-text); }
+
+.title { font-size: 13px; font-weight: 500; flex: 1; }
+
+.methodBadge {
+  font-size: 10px; padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+.methodGet    { background: #eaf3de; color: #3b6d11; }
+.methodPost   { background: #e6f1fb; color: #185fa5; }
+.methodPut    { background: #faeeda; color: #854f0b; }
+.methodPatch  { background: #fbeaf0; color: #993556; }
+.methodDelete { background: #fcebeb; color: #a32d2d; }
+
+.actions { display: flex; gap: 4px; }
+.iconBtn {
+  background: transparent; border: none;
+  cursor: pointer; color: var(--color-text-tertiary);
+  font-size: 13px; padding: 2px 5px;
+  border-radius: 4px;
+}
+.iconBtn:hover { color: var(--color-text); background: var(--color-bg-tertiary); }
+
+.chevron { font-size: 11px; color: var(--color-text-tertiary); transition: transform 0.2s; }
+.chevronOpen { transform: rotate(180deg); }
+
+.body { padding: 14px; }
+.field { margin-bottom: 10px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.row3 { display: grid; grid-template-columns: 100px 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+
+.previewBar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 12px; padding-top: 12px;
+  border-top: 0.5px solid var(--color-border);
+}
+.previewBtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  border: 0.5px solid var(--color-border-strong);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  transition: all 0.15s;
+}
+.previewBtn:hover:not(:disabled) { background: var(--color-bg-secondary); color: var(--color-text); }
+.previewBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.previewOk { font-size: 11px; color: var(--color-green-text); }
+
+.previewBox {
+  margin-top: 10px;
+  border-radius: var(--radius-md);
+  border: 0.5px solid var(--color-border);
+  overflow: hidden;
+}
+.previewHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 7px 12px;
+  background: var(--color-bg-secondary);
+  border-bottom: 0.5px solid var(--color-border);
+}
+.previewLabel { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); }
+.copySmall {
+  font-size: 11px; color: var(--color-text-tertiary);
+  background: transparent;
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px; cursor: pointer;
+}
+.copySmall:hover { background: var(--color-bg-tertiary); }
+.previewCode {
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 11px; line-height: 1.6;
+  white-space: pre-wrap; word-break: break-word;
+  color: var(--color-text);
+  background: var(--color-bg);
+  max-height: 200px; overflow-y: auto;
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border: 2px solid rgba(0,0,0,0.15);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.addAfterBar {
+  display: flex;
+  justify-content: center;
+  padding: 8px 14px;
+  border-top: 0.5px solid var(--color-border);
+  background: var(--color-bg-secondary);
+}
+
+.addAfterBtn {
+  padding: 5px 16px;
+  border-radius: var(--radius-md);
+  border: 0.5px dashed var(--color-border-strong);
+  background: transparent;
+  color: var(--color-blue-text);
+  font-size: 12px;
+  transition: all 0.15s;
+}
+.addAfterBtn:hover {
+  background: var(--color-blue-bg);
+  border-color: var(--color-blue-border);
+}
+
+.validationErrors {
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: #fcebeb;
+  border: 0.5px solid #f09595;
+}
+
+.validationWarnings {
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: #faeeda;
+  border: 0.5px solid #fac775;
+}
+
+.validationTitle {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: inherit;
+}
+
+.validationErrors .validationTitle { color: #a32d2d; }
+.validationWarnings .validationTitle { color: #854f0b; }
+
+.validationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  color: var(--color-text);
+}
+.validationItem:last-child { margin-bottom: 0; }
+
+.iconError { color: #a32d2d; font-weight: 500; flex-shrink: 0; }
+.iconWarn  { color: #854f0b; font-weight: 500; flex-shrink: 0; }
+
+.previewBadge { font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; }
+.previewBadgeSuccess { background: #E1F5EE; color: #0F6E56; }
+.previewBadgeError   { background: #FCEBEB; color: #A32D2D; }
+
+.pathHint {
+  display: flex;
+  gap: 12px;
+  margin-top: 3px;
+}
+.pathHint span {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+}
+.pathHint code {
+  font-family: var(--font-mono);
+  background: var(--color-bg-tertiary);
+  padding: 0 3px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+
+.exportFeatureBar {
+  display: flex; justify-content: flex-end;
+  padding: 8px 0 4px;
+}
+.exportFeatureBtn {
+  padding: 5px 12px; border-radius: var(--radius-md);
+  border: 0.5px solid #AFA9EC; background: #EEEDFE;
+  color: #534AB7; font-size: 12px; cursor: pointer; transition: all .15s;
+}
+.exportFeatureBtn:hover { background: #CECBF6; }

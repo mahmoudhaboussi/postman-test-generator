@@ -1,0 +1,91 @@
+.card {
+  background: var(--color-bg);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.field { margin-bottom: 1rem; }
+.field:last-child { margin-bottom: 0; }
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tcToggle {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.tcBtn {
+  padding: 3px 12px;
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tcBtn.active {
+  background: var(--color-green-bg);
+  color: var(--color-green-text);
+  border-color: var(--color-green-border);
+  font-weight: 500;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  border: 0.5px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  flex: 1;
+  min-width: 150px;
+  user-select: none;
+}
+.checkboxItem:hover { border-color: var(--color-border-strong); }
+.checkboxActive {
+  background: var(--color-blue-bg);
+  border-color: var(--color-blue-border);
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  accent-color: var(--color-blue-text);
+  cursor: pointer;
+}
+
+.checkboxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.checkboxLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.checkboxActive .checkboxLabel { color: var(--color-blue-text); }
+
+.checkboxDesc {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}

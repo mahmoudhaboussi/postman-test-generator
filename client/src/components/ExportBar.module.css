@@ -1,0 +1,78 @@
+.box {
+  margin-top: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 0.5px solid var(--color-border);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 0.5px solid var(--color-border);
+  background: var(--color-bg-secondary);
+}
+
+.tab {
+  padding: 9px 18px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.tab:hover { color: var(--color-text); }
+.tabActive {
+  color: var(--color-text);
+  font-weight: 500;
+  border-bottom-color: var(--color-text);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: var(--color-bg-secondary);
+  border-bottom: 0.5px solid var(--color-border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  flex: 1;
+}
+
+.actions { display: flex; gap: 6px; }
+
+.actionBtn {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  transition: all 0.15s;
+}
+.actionBtn:hover { background: var(--color-bg-tertiary); color: var(--color-text); }
+
+.btnBlue { color: var(--color-blue-text); border-color: var(--color-blue-border); }
+.btnBlue:hover { background: var(--color-blue-bg); }
+
+.btnGreen { color: var(--color-green-text); border-color: var(--color-green-border); }
+.btnGreen:hover { background: var(--color-green-bg); }
+
+.code {
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--color-text);
+  background: var(--color-bg);
+  max-height: 420px;
+  overflow-y: auto;
+}
