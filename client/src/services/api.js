@@ -1,4 +1,4 @@
-const BASE = '/api';
+const BASE = 'https://postman-test-generator-production.up.railway.app/api';
 
 export async function generateRequests({ endpoint, idx, allEndpoints, userStory, baseUrl }) {
   const res = await fetch(`${BASE}/generate/requests`, {
@@ -22,7 +22,7 @@ export async function generateCollection({ endpoints, userStory, baseUrl, collec
 }
 
 export async function generateGherkin({ spec, endpointPath, method, bodyNominal, code, label, scenario, values, assertions }) {
-  const res = await fetch('/api/generate/gherkin', {
+  const res = await fetch(`${BASE}/generate/gherkin`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ spec, endpointPath, method, bodyNominal, code, label, scenario, values, assertions }),
@@ -33,7 +33,7 @@ export async function generateGherkin({ spec, endpointPath, method, bodyNominal,
 }
 
 export async function suggestValues({ endpoint, code, scenario }) {
-  const res = await fetch('/api/generate/suggest-values', {
+  const res = await fetch(`${BASE}/generate/suggest-values`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ endpoint, code, scenario }),
